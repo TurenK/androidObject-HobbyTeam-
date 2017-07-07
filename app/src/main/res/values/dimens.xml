@@ -1,0 +1,22 @@
+<resources>
+    <!-- components -->
+    <dimen name="titleBarSize">45dp</dimen>
+    <dimen name="editTextWeight">260dp</dimen>
+    <dimen name="editTextHeight">40dp</dimen>
+    <dimen name="registerBtnWeight">260dp</dimen>
+    <dimen name="registerBtnHeight">40dp</dimen>
+    <dimen name="emptyHeight">55dp</dimen>
+    <dimen name="ContractHeight">32dp</dimen>
+    <dimen name="Contract1Weight">167dp</dimen>
+    <dimen name="ContractWeight">93dp</dimen>
+    <dimen name="EditTextTipsSize">32dp</dimen>
+
+    <!-- text size -->
+    <dimen name="titleText">16sp</dimen>
+    <dimen name="titleButton">13sp</dimen>
+    <dimen name="editText">10sp</dimen>
+    <dimen name="editPadding">10sp</dimen>
+    <dimen name="sendCAPSize">8sp</dimen>
+    <dimen name="ContractTextSize">10sp</dimen>
+    <dimen name="linkedText">10sp</dimen>
+</resources>
