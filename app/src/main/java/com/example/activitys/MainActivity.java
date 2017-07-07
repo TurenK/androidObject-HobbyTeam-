@@ -1,4 +1,4 @@
-package com.example.turenk.uarerighthobbyteam;
+package com.example.activitys;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,9 +8,15 @@ import android.widget.*;
 import java.io.*;
 import android.content.*;
 import com.alibaba.fastjson.JSONObject;
+import com.example.model.UserInfo;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+
+import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 
 public class MainActivity extends Activity {
     Button log;
@@ -32,13 +38,22 @@ public class MainActivity extends Activity {
         save=(CheckBox) findViewById(R.id.save);
         save.setChecked(true);
 
+//        if(this.getIntent()!=null) {
+//            String oldID = this.getIntent().getStringExtra("username");
+//            if (oldID != null || !oldID.isEmpty()) {
+//                ID.setText(oldID);
+//            }
+//        }
+        Bmob.initialize(this,ServiceUrl.getAfterCloudID(MainActivity.this));
+
         String get=getTxtFileInfo(getApplicationContext());
-        if(get!=null&&!get.equals("##"))
+        if(get!=null&&get.charAt(0)!='#'&&get.charAt(get.length()-1)!='#')
         {
             // 使用保存信息使用的##将内容分割出来
             String[] contents = get.split("##");
-            ID.setText(deal(contents[0], (byte) 88));
-            password.setText(deal(contents[1], (byte) 88));
+                ID.setText(deal(contents[0], (byte) 88));
+                password.setText(deal(contents[1], (byte) 88));
+
         }
 
         //登录点击事件
@@ -50,7 +65,7 @@ public class MainActivity extends Activity {
                 }
                 String phone = ID.getText().toString();
                 String pwd = password.getText().toString();
-                login(phone,pwd);
+                loginCloudServer(phone,pwd);
                 //Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
             }
         });
@@ -122,7 +137,23 @@ public class MainActivity extends Activity {
         }
     }
 
-    private void login(String phone,String pwd){
+    private void loginCloudServer(String phone,String pwd){
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUsername(phone);
+        userInfo.setPassword(pwd);
+        userInfo.login(new SaveListener<UserInfo>() {
+            @Override
+            public void done(UserInfo userInfo, BmobException e) {
+                if(e!=null){
+                    Toast.makeText(MainActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void loginOwnServer(String phone,String pwd){
         //initialize
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
         RequestParams params = new RequestParams();
@@ -130,26 +161,27 @@ public class MainActivity extends Activity {
         params.put("pwd",pwd);
 
         // send messages
-        String url = ServiceUrl.getLOGINUrl(MainActivity.this);
+        String url = ServiceUrl.getLocalLOGINUrl(MainActivity.this);
 
-        Log.e("tag","test5464564");
-        asyncHttpClient.post("http://172.31.34.141:8080/hobby/user/login",params,new AsyncHttpResponseHandler(){
+        Log.e("tag","test0");
+        asyncHttpClient.post(url,params,new AsyncHttpResponseHandler(){
             @Override
             public void onSuccess(String content) {
                 //in the document(json format)
-                Log.e("tag","test334");
                 JSONObject jsonObject = JSONObject.parseObject(content);
                 boolean result = jsonObject.getBoolean("success");
                 String info = jsonObject.getString("info");
-                Log.e("tag","testsadad2");
+                Log.e("tag","test1");
 
                 //analyze the result
                 if(result)
                 {
+                    Log.e("tag","test2");
                     Toast.makeText(MainActivity.this,info,Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
+                    Log.e("tag","test3");
                     //error
                     Toast.makeText(MainActivity.this,info,Toast.LENGTH_SHORT).show();
                 }
@@ -157,7 +189,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onFailure(Throwable error, String content) {
-                Log.e("tag","test1");
+                Log.e("tag","test4");
                 Toast.makeText(MainActivity.this,content,Toast.LENGTH_SHORT).show();
             }
         });

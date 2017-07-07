@@ -1,4 +1,4 @@
-package com.example.turenk.uarerighthobbyteam;
+package com.example.activitys;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,21 +7,26 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
-import com.alibaba.fastjson.JSONObject;
+import com.example.activitys.R;
+import com.example.model.UserInfo;
 import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+
+import cn.bmob.v3.BmobSMS;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.QueryListener;
+import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.listener.UpdateListener;
 
 /**
  * Created by TurenK on 2017/7/5.
  */
-public class RegisterActivity extends Activity {
+public class ForgetpwdActivity extends Activity {
     private EditText userID = null;
     private EditText msgCAP = null;
     private EditText psw = null;
     private EditText repearPsw = null;
     private EditText CAP = null;
-    private TextView Contract = null;
     private Button sendMsg = null;
     private Button back = null;
     private Button register = null;
@@ -39,7 +44,7 @@ public class RegisterActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forgetpwd);
 
         InitFace();
 
@@ -89,62 +94,6 @@ public class RegisterActivity extends Activity {
                                       }
         );
 
-        // messageCAP changing the focus
-        msgCAP.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                String msgCAPString = msgCAP.getText().toString();
-                if (msgCAPString == null || msgCAPString.isEmpty() || msgCAPString.length() != 4) {
-                    msgCAPEditTip.setImageResource(R.mipmap.wrongtip);
-                    msgCAPEditTip.setVisibility(ImageView.VISIBLE);
-                    canMsgCAP = false;
-                }
-                // judge the CAPCHAR
-
-
-                else {
-                    msgCAPEditTip.setImageResource(R.mipmap.righttip);
-                    msgCAPEditTip.setVisibility(ImageView.VISIBLE);
-                    canMsgCAP = true;
-                }
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String msgCAPString = msgCAP.getText().toString();
-                if (msgCAPString == null || msgCAPString.isEmpty() || msgCAPString.length() != 4) {
-                    msgCAPEditTip.setImageResource(R.mipmap.wrongtip);
-                    msgCAPEditTip.setVisibility(ImageView.VISIBLE);
-                    canMsgCAP = false;
-                }
-                // judge the CAPCHAR
-
-
-                else {
-                    msgCAPEditTip.setImageResource(R.mipmap.righttip);
-                    msgCAPEditTip.setVisibility(ImageView.VISIBLE);
-                    canMsgCAP = true;
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                String msgCAPString = msgCAP.getText().toString();
-                if (msgCAPString == null || msgCAPString.isEmpty() || msgCAPString.length() != 4) {
-                    msgCAPEditTip.setImageResource(R.mipmap.wrongtip);
-                    msgCAPEditTip.setVisibility(ImageView.VISIBLE);
-                    canMsgCAP = false;
-                }
-                // judge the CAPCHAR
-
-
-                else {
-                    msgCAPEditTip.setImageResource(R.mipmap.righttip);
-                    msgCAPEditTip.setVisibility(ImageView.VISIBLE);
-                    canMsgCAP = true;
-                }
-            }
-        });
 
         // password changing the focus
         psw.addTextChangedListener(new TextWatcher() {
@@ -303,7 +252,7 @@ public class RegisterActivity extends Activity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RegisterActivity.this.finish();
+                ForgetpwdActivity.this.finish();
             }
         });
 
@@ -312,26 +261,22 @@ public class RegisterActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (!canUser) {
-                    Toast.makeText(RegisterActivity.this, "手机号输入有误", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgetpwdActivity.this, "手机号输入有误", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (SendMsg()) {
-                        CountDownTime countDownTime = new CountDownTime(60000, 1000, sendMsg);
-                        countDownTime.start();
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "发送验证码失败", Toast.LENGTH_SHORT).show();
-                    }
+                    BmobSMS.requestSMS(userID.getText().toString(), ForgetpwdActivity.this.getString(R.string.registerModelName), "1", new QueryListener<Integer>() {
+                        @Override
+                        public void done(Integer integer, BmobException e) {
+                            if (e == null) {
+                                Toast.makeText(ForgetpwdActivity.this, "验证码发送成功", Toast.LENGTH_SHORT).show();
+                                CountDownTime countDownTime = new CountDownTime(60000, 1000, sendMsg);
+                                countDownTime.start();
+                            } else {
+                                Toast.makeText(ForgetpwdActivity.this, "验证码发送失败", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 }
 
-            }
-        });
-
-        // turn to the contract page
-        Contract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(RegisterActivity.this, ContractActivity.class);
-                RegisterActivity.this.startActivity(intent);
             }
         });
 
@@ -341,9 +286,9 @@ public class RegisterActivity extends Activity {
                 if(judgeRegist()){
                     String phone = userID.getText().toString();
                     String password = psw.getText().toString();
-                    reg(phone,password);
+                    submitCloud(phone,password);
                 }else{
-                    Toast.makeText(RegisterActivity.this, "请重新输入", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgetpwdActivity.this, "请重新输入", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -356,10 +301,9 @@ public class RegisterActivity extends Activity {
         psw = (EditText) findViewById(R.id.passwordEdit);
         repearPsw = (EditText) findViewById(R.id.RepeatPswEdit);
         CAP = (EditText) findViewById(R.id.CAPEdit);
-        Contract = (TextView) findViewById(R.id.contract);
         sendMsg = (Button) findViewById(R.id.sendCAPBtn);
         back = (Button) findViewById(R.id.backBtn);
-        register = (Button) findViewById(R.id.registerBtn);
+        register = (Button) findViewById(R.id.submitBTN);
 
         UserEditTip = (ImageView) findViewById(R.id.UserEditTip);
         UserEditTip.setVisibility(ImageView.INVISIBLE);
@@ -385,67 +329,106 @@ public class RegisterActivity extends Activity {
     // judge the register condition
     private boolean judgeRegist(){
         if(!canUser){
-            Toast.makeText(RegisterActivity.this, "手机号输入有误", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ForgetpwdActivity.this, "手机号输入有误", Toast.LENGTH_SHORT).show();
             return false;
         }
         if(!canCAP){
-            Toast.makeText(RegisterActivity.this, "验证码输入有误", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ForgetpwdActivity.this, "验证码输入有误", Toast.LENGTH_SHORT).show();
             return false;
         }
         if(!canRepeatPsw){
-            Toast.makeText(RegisterActivity.this, "密码两次输入不一致", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ForgetpwdActivity.this, "密码两次输入不一致", Toast.LENGTH_SHORT).show();
             return false;
         }
         if(!canPsw){
-            Toast.makeText(RegisterActivity.this, "密码输入有误", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        if(!canMsgCAP){
-            Toast.makeText(RegisterActivity.this, "短信验证码输入有误", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ForgetpwdActivity.this, "密码输入有误", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         return true;
     }
 
-    // register impliment
-    private void reg(String phone,String password){
+    private void submitCloud(String phone,String password){
+        BmobSMS.verifySmsCode(phone, msgCAP.getText().toString(), new UpdateListener() {
+            @Override
+            public void done(BmobException e) {
+                if (e == null) {
+                    canMsgCAP = true;
+                    Toast.makeText(ForgetpwdActivity.this, "验证码输入正确", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ForgetpwdActivity.this, "验证码输入有误", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        if (canMsgCAP) {
+            UserInfo userInfo = new UserInfo();
+            userInfo.setUsername(phone);
+            userInfo.setPassword(password);
+            userInfo.setMobilePhoneNumber(phone);
+
+            userInfo.signOrLogin(msgCAP.getText().toString(), new SaveListener<UserInfo>() {
+                @Override
+                public void done(UserInfo userInfo, BmobException e) {
+                    if (e == null) {
+                        Toast.makeText(ForgetpwdActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(ForgetpwdActivity.this, "注册失败", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
+
+    // forget password implement
+    private void submit(String phone,String password){
         //initialize
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
         RequestParams params = new RequestParams();
         params.put("phone",userID.getText().toString());
         params.put("pwd",psw.getText().toString());
 
-        // send messages
-        String url = ServiceUrl.getREGUrl(RegisterActivity.this);
+       // String userid = userID.getText().toString();
+       // Bundle bundle = new Bundle();
+        //bundle.putString("username",userid);
+        Intent intent = new Intent(ForgetpwdActivity.this,MainActivity.class);
+        //intent.putExtras(bundle);
+        startActivity(intent);
 
-        asyncHttpClient.post(url,params,new AsyncHttpResponseHandler(){
-            @Override
-            public void onSuccess(String content) {
-                //in the document(json format)
-                JSONObject jsonObject = JSONObject.parseObject(content);
-                boolean result = jsonObject.getBoolean("success");
-                String info = jsonObject.getString("info");
-
-                //analyze the result
-                if(result)
-                {
-                    JSONObject object = jsonObject.getJSONObject("data");
-                    String userid = object.getString("id");
-                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
-                else
-                {
-                    //error
-                    Toast.makeText(RegisterActivity.this,info,Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable error, String content) {
-                Toast.makeText(RegisterActivity.this,content,Toast.LENGTH_SHORT).show();
-            }
-        });
+//        // send messages
+//        String url = ServiceUrl.getREGUrl(RegisterActivity.this);
+//
+//        asyncHttpClient.post(url,params,new AsyncHttpResponseHandler(){
+//            @Override
+//            public void onSuccess(String content) {
+////                //in the document(json format)
+////                JSONObject jsonObject = JSONObject.parseObject(content);
+////                boolean result = jsonObject.getBoolean("success");
+////                String info = jsonObject.getString("info");
+////
+////                //analyze the result
+////                if(result)
+////                {
+////                    JSONObject object = jsonObject.getJSONObject("data");
+////                    String userid = object.getString("id");
+//                String userid = userID.getText().toString();
+//                Bundle bundle = new Bundle();
+//                    bundle.putString("username",userid);
+//                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+//                    intent.putExtras(bundle);
+//                    startActivity(intent);
+////                }
+////                else
+////                {
+////                    Log.e("tag","test1");
+////                    //error
+////                    Toast.makeText(RegisterActivity.this,info,Toast.LENGTH_SHORT).show();
+////                }
+//            }
+//
+//            @Override
+//            public void onFailure(Throwable error, String content) {
+//                Toast.makeText(RegisterActivity.this,content,Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 }

@@ -1,7 +1,7 @@
-package com.example.turenk.uarerighthobbyteam;
+package com.example.activitys;
 
 import android.content.Context;
-import com.example.turenk.uarerighthobbyteam.R;
+import com.example.activitys.R;
 
 /**
  * Created by TurenK on 2017/7/6.
@@ -11,15 +11,23 @@ public class ServiceUrl {
         return context.getString(R.string.URL_SERVER);
     }
 
-    public static String getREGUrl(Context context) {
+    public static String getTestREGUrl(Context context) {
         return context.getString(R.string.URL_SERVER) + context.getString(R.string.URL_REG);
     }
 
-    public static String getLOGINUrl(Context context) {
+    public static String getTestLOGINUrl(Context context) {
         return context.getString(R.string.URL_SERVER) + context.getString(R.string.URL_LOGIN);
     }
 
     public static String getLocalREGUrl(Context context){
         return context.getString(R.string.localURLREG);
+    }
+
+    public static String getLocalLOGINUrl(Context context){
+        return context.getString(R.string.localURLLOGIN);
+    }
+
+    public static String getAfterCloudID(Context context){
+        return context.getString(R.string.AfterCloudID);
     }
 }

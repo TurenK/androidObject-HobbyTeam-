@@ -1,4 +1,4 @@
-package com.example.turenk.uarerighthobbyteam;
+package com.example.activitys;
 
 import android.os.CountDownTimer;
 import android.widget.Button;

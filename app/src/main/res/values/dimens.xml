@@ -10,6 +10,8 @@
     <dimen name="Contract1Weight">167dp</dimen>
     <dimen name="ContractWeight">93dp</dimen>
     <dimen name="EditTextTipsSize">32dp</dimen>
+    <dimen name="VertifyLinearWidth">92dp</dimen>
+    <dimen name="VertifyButton">52dp</dimen>
 
     <!-- text size -->
     <dimen name="titleText">16sp</dimen>

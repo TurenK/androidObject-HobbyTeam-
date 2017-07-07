@@ -1,10 +1,10 @@
-package com.example.turenk.uarerighthobbyteam;
+package com.example.activitys;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.example.activitys.R;
 
 /**
  * Created by TurenK on 2017/7/6.

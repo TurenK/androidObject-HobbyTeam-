@@ -19,6 +19,8 @@
     <string name="password">密码</string>
     <string name="keepPwd">保存密码</string>
     <string name="forgotPwd">忘记密码</string>
-    <string name="localURLREG">127.0.0.1/aaa/register</string>
-    <string name="localURLLOGIN">127.0.0.1/aaa/login</string>
+    <string name="localURLREG">localhost/hobbyteam/register</string>
+    <string name="localURLLOGIN">localhost/hobbyteam/login</string>
+    <string name="AfterCloudID">898fbfd17c0c614012b2a5549c98ce90</string>
+    <string name="registerModelName">确定用户手机</string>
 </resources>
