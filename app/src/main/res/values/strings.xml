@@ -24,6 +24,7 @@
     <string name="AfterCloudID">898fbfd17c0c614012b2a5549c98ce90</string>
     <string name="registerModelName">确定用户手机</string>
     <string name="推荐">推荐</string>
+    <string name="附近">附近</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

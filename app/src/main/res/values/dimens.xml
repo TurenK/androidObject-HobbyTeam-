@@ -12,6 +12,7 @@
     <dimen name="EditTextTipsSize">32dp</dimen>
     <dimen name="VertifyLinearWidth">92dp</dimen>
     <dimen name="VertifyButton">52dp</dimen>
+    <dimen name="itemSize">250dp</dimen>
 
     <!-- text size -->
     <dimen name="titleText">16sp</dimen>

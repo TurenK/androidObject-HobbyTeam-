@@ -21,27 +21,44 @@
         android:gravity="center_horizontal|center_vertical"
         >
         <Spinner
-            android:layout_width="wrap_content"
+            android:id="@+id/title_Spinner"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:entries="@array/spingarr"
+            android:entries="@array/ExeChoose"
            android:background="@color/colorWhite"
-
+            android:gravity="center_horizontal|center_vertical"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/title_Recommend"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="@string/推荐"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/titleText"
+            android:gravity="center_horizontal|center_vertical"
+            />
+        <TextView
+            android:id="@+id/title_Nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="50dp"
+            android:text="@string/附近"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/titleText"
+            android:gravity="center_horizontal|center_vertical"
             />
 
     </LinearLayout>
 
-    <ImageView
+    <TextView
+        android:id="@+id/title_More"
+        android:gravity="center_horizontal"
         android:layout_width="0dp"
         android:layout_weight="0.1"
         android:layout_height="match_parent"
-        android:src="@android:drawable/ic_input_add"
+        android:text="..."
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
         />
 
 

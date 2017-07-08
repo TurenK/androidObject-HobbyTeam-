@@ -5,8 +5,14 @@
         <attr name="titleTextColor" format="color" />
         <attr name="titleTextSize" format="dimension" />
     </declare-styleable>
-    <string-array name="spingarr">
+    <string-array name="ExeChoose">
         <item>全部</item>
-        <item>我感兴趣的</item>
+        <item>兴趣</item>
+    </string-array>
+    <string-array name="Interests">
+        <item>主题</item>
+        <item>篮球</item>
+        <item>篮球</item>
+        <item>篮球</item>
     </string-array>
 </resources>
