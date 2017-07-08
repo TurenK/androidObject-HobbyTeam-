@@ -5,4 +5,11 @@
         <!-- Customize your theme here. -->
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="TitleText">
+        <item name="android:textColor">#FFFF</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
 </resources>

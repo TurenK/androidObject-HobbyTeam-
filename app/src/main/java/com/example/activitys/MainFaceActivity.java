@@ -1,15 +1,14 @@
-package com.example.activitys.User;
+package com.example.activitys;
 
 import android.app.Activity;
 import android.os.Bundle;
-
 import com.example.activitys.R;
 
-public class UserMainActivity extends Activity {
+public class MainFaceActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_main);
+        setContentView(R.layout.activity_main_face);
     }
 }
