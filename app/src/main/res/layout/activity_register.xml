@@ -12,7 +12,7 @@
         android:id="@+id/titleBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/titleBarSize"
-        android:background="@color/colorLogRegTitleBar"
+        android:background="@color/colorBlack"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:weightSum="1">
@@ -22,10 +22,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:background="@color/colorLogRegTitleBar"
+            android:background="@color/colorBlack"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/back"
-            android:textColor="@color/colorLogRegTitleText"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/titleButton" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_weight="0.6"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/register"
-            android:textColor="@color/colorLogRegTitleText"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/titleText" />
 
         <TextView
@@ -97,9 +97,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
-                android:background="@color/btnLogReg"
+                android:background="@color/colorLightBlue"
                 android:text="@string/sendCAP"
-                android:textColor="@color/btnTextLogReg"
+                android:textColor="@color/colorWhite"
                 android:textSize="@dimen/sendCAPSize" />
         </LinearLayout>
 
@@ -234,9 +234,9 @@
             android:layout_height="@dimen/registerBtnHeight"
             android:layout_below="@id/textCAP"
             android:layout_marginTop="@dimen/editPadding"
-            android:background="@color/btnLogReg"
+            android:background="@color/colorLightBlue"
             android:text="@string/register"
-            android:textColor="@color/btnTextLogReg" />
+            android:textColor="@color/colorWhite" />
 
         <LinearLayout
             android:id="@+id/contractLayout"
@@ -252,7 +252,7 @@
                 android:layout_height="match_parent"
                 android:gravity="end|center_vertical"
                 android:text="@string/Contract1"
-                android:textColor="@color/colorLogRegTitleBar"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/ContractTextSize" />
 
             <TextView
@@ -261,7 +261,7 @@
                 android:layout_height="match_parent"
                 android:gravity="start|center_vertical"
                 android:text="@string/Contract"
-                android:textColor="@color/colorLogRegLinked"
+                android:textColor="@color/colorDarkBlue"
                 android:textSize="@dimen/ContractTextSize" />
         </LinearLayout>
 

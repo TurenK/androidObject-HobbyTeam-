@@ -16,8 +16,8 @@
         android:id="@+id/back"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="@color/btnLogReg"
+        android:background="@color/colorLightBlue"
         android:text="返回"
-        android:textColor="@color/btnTextLogReg" />
+        android:textColor="@color/colorWhite" />
 
 </LinearLayout>

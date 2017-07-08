@@ -8,6 +8,7 @@ import android.widget.*;
 import java.io.*;
 import android.content.*;
 import com.alibaba.fastjson.JSONObject;
+import com.example.activitys.MainFaceActivity;
 import com.example.activitys.R;
 import com.example.model.UserInfo;
 import com.loopj.android.http.AsyncHttpClient;
@@ -137,7 +138,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    private void loginCloudServer(String phone,String pwd){
+    private void loginCloudServer(String phone, String pwd){
         UserInfo userInfo = new UserInfo();
         userInfo.setUsername(phone);
         userInfo.setPassword(pwd);
@@ -148,6 +149,19 @@ public class MainActivity extends Activity {
                     Toast.makeText(MainActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                    UserInfo tempuser = UserInfo.getCurrentUser(UserInfo.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("username",tempuser.getUsername());
+                    bundle.putString("nickname",tempuser.getNickname());
+                    bundle.putString("address",tempuser.getAddress());
+                    bundle.putString("headimg",tempuser.getHeadimg());
+                    bundle.putString("intimeaddr",tempuser.getIntimeaddr());
+                    bundle.putString("intro",tempuser.getIntro());
+                    bundle.putString("sex",tempuser.getSex());
+                    Intent intent = new Intent();
+                    intent.putExtras(bundle);
+                    intent.setClass(MainActivity.this, MainFaceActivity.class);
+                    startActivity(intent);
                 }
             }
         });

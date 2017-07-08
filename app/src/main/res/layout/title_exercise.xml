@@ -2,49 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/titleBarSize"
-    android:background="@color/colorMainFaceTitleBar"
-    android:gravity="center_horizontal|center_vertical"
+    android:background="@color/colorWhite"
+    android:gravity="start|center_vertical"
     >
 
-
-    <TextView
-        android:id="@+id/tv_nearby"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="附近"
-        style="@style/TitleText"
-        />
-    <TextView
-        android:id="@+id/tv_recommend"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_toLeftOf="@id/tv_nearby"
-        android:gravity="center"
-        android:text="推荐"
-        android:layout_marginRight="20dp"
-        style="@style/TitleText"
-        />
-
-    <TextView
-        android:id="@+id/tv_friend"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_toRightOf="@id/tv_nearby"
-        android:layout_marginLeft="20dp"
-        android:gravity="center"
-        android:text="好友"
-        style="@style/TitleText"
-        />
     <ImageView
         android:id="@+id/iv_event_search"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@android:drawable/ic_menu_search"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
+        android:layout_width="0dp"
+        android:layout_weight="0.1"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_search_category_default"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        >
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/spingarr"
+           android:background="@color/colorWhite"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/推荐"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/titleText"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="0.1"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_input_add"
         />
 
 

@@ -53,7 +53,7 @@
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:text="@string/keepPwd"
-            android:textColor="@color/colorLogRegEditText"
+            android:textColor="@color/colorBlack"
             android:textSize="@dimen/linkedText"
             />
     </LinearLayout>
@@ -67,8 +67,8 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:contentDescription=""
-        android:background="@color/btnLogReg"
-        android:textColor="@color/btnTextLogReg"
+        android:background="@color/colorLightBlue"
+        android:textColor="@color/colorWhite"
         android:text="@string/login" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/forgotPwd"
-            android:textColor="@color/colorLogRegLinked"/>
+            android:textColor="@color/colorDarkBlue"/>
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="match_parent">
@@ -93,6 +93,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/register"
-            android:textColor="@color/colorLogRegLinked"/>
+            android:textColor="@color/colorDarkBlue"/>
     </LinearLayout>
 </LinearLayout>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorLogRegTitleBar">#000000</color>
-    <color name="colorLogRegTitleText">#FFFFFF</color>
-    <color name="colorLogRegBg">#F8F8FF</color>
-    <color name="colorLogRegEditText">#000000</color>
-    <color name="colorLogRegLinked">#3F51B5</color>
-    <color name="btnLogReg">#00bfff</color>
-    <color name="btnTextLogReg">#ffffff</color>
-    <color name="colorMainFaceTitleBar">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTinyDarkWhite">#F8F8FF</color>
+    <color name="colorDarkBlue">#3F51B5</color>
+    <color name="colorLightBlue">#00bfff</color>
 </resources>
