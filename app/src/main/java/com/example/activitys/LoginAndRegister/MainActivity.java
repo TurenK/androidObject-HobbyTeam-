@@ -1,4 +1,4 @@
-package com.example.activitys;
+package com.example.activitys.LoginAndRegister;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,13 +8,13 @@ import android.widget.*;
 import java.io.*;
 import android.content.*;
 import com.alibaba.fastjson.JSONObject;
+import com.example.activitys.R;
 import com.example.model.UserInfo;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import cn.bmob.v3.Bmob;
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1"
     android:background="@mipmap/register_bg"
     android:orientation="vertical">
@@ -201,13 +201,16 @@
                     android:layout_gravity="right|center_vertical"
                     />
             </FrameLayout>
-            <TextView
+            <com.example.DefinedComponents.AuthCodeView
+                android:id="@+id/AuthCodeView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
-                android:hint="验证码"
-                android:textSize="@dimen/editText"
                 android:gravity="center_horizontal|center_vertical"
+                android:textSize="@dimen/editText"
+                app:titleText="3712"
+                app:titleTextColor="#00ffff"
+                app:titleTextSize="23sp"
                 />
         </LinearLayout>
         <Button

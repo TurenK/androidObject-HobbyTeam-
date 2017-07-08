@@ -1,4 +1,4 @@
-package com.example.activitys;
+package com.example.activitys.LoginAndRegister;
 
 import android.content.Context;
 import com.example.activitys.R;
