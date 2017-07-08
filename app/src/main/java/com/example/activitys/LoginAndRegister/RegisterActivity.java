@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
@@ -300,14 +301,17 @@ public class RegisterActivity extends Activity {
                 if (!canUser) {
                     Toast.makeText(RegisterActivity.this, "手机号输入有误", Toast.LENGTH_SHORT).show();
                 } else {
-                    BmobSMS.requestSMS(userID.getText().toString(), RegisterActivity.this.getString(R.string.registerModelName), "1000", new QueryListener<Integer>() {
+                    Log.e("tag","test1");
+                    BmobSMS.requestSMSCode(userID.getText().toString(), "确定用户手机", new QueryListener<Integer>() {
                         @Override
                         public void done(Integer integer, BmobException e) {
                             if (e == null) {
+                                Log.e("tag","test2");
                                 Toast.makeText(RegisterActivity.this, "短信验证码发送成功", Toast.LENGTH_SHORT).show();
                                 CountDownTime countDownTime = new CountDownTime(60000, 1000, sendMsg);
                                 countDownTime.start();
                             } else {
+                                Log.e("tag","test3");
                                 Toast.makeText(RegisterActivity.this, "短信验证码发送失败", Toast.LENGTH_SHORT).show();
                             }
                         }
