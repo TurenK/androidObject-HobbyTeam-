@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Fragment.Exercise.ExerciseFragment"
+    android:background="@color/back">
+
+    <LinearLayout
+        android:id="@+id/linearww99"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarSize"
+            android:background="@color/head"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="广 场"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/entire_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarSize"
+            android:background="@color/colorWhite"
+            android:gravity="start|center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center_horizontal|center_vertical">
+
+                <TextView
+                    android:id="@+id/title_exercise_All"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/全部"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/titleText" />
+
+                <TextView
+                    android:id="@+id/title_exercise_Interest"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/兴趣"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/titleText" />
+
+                <TextView
+                    android:id="@+id/title_exercise_Nearby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/附近"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/titleText" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <SearchView
+            android:id="@+id/exercise_mainfragment_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorGray"
+            android:iconifiedByDefault="true"
+            android:queryHint="请输入查询活动名称" />
+
+        <ListView
+            android:id="@+id/lv_eventlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back"
+            android:descendantFocusability="afterDescendants" />
+    </LinearLayout>
+</FrameLayout>

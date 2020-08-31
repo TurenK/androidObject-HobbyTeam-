@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/exercise_query_mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/exercise_query_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </SearchView>
+
+            <Button
+                android:id="@+id/exercise_query_cancelbtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

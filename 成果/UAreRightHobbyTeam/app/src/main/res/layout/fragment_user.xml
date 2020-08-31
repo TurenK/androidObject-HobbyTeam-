@@ -1,0 +1,315 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:orientation="vertical"
+    tools:context="com.example.Fragment.User.UserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleBarSize"
+        android:background="@color/head"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="我"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:id="@+id/Detail"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/user_mainface_userImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_mainface_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="gay典"
+                android:textColor="@color/gray"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/user_mainface_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test:12312341234"
+                android:textColor="@color/lightgray"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/zhuan1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:id="@+id/album"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/album" />
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="相册"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/face"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/touxiang" />
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="表情"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/setting" />
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/ac" />
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="活动数据"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <LinearLayout
+        android:id="@+id/out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/power" />
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="注销"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=">"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
+</LinearLayout>

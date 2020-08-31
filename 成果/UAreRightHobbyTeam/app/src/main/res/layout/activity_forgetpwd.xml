@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/register_bg"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleBarSize"
+        android:background="@color/head"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@color/head"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/back"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/forgotPwd"
+            android:textColor="@color/colorWhite"
+            android:textSize="23sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/Empty"
+            android:layout_width="@dimen/editTextWeight"
+            android:layout_height="@dimen/emptyHeight"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userIDEdit"
+            android:layout_width="@dimen/editTextWeight"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_below="@id/Empty">
+
+            <FrameLayout
+                android:id="@+id/userFrame"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8">
+
+                <EditText
+                    android:id="@+id/UserEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/register_edit_bg"
+                    android:drawableLeft="@mipmap/user"
+                    android:drawablePadding="@dimen/editPadding"
+                    android:hint="@string/userIDTip"
+                    android:inputType="phone"
+                    android:textSize="@dimen/editText" />
+
+                <ImageView
+                    android:id="@+id/UserEditTip"
+                    android:layout_width="@dimen/EditTextTipsSize"
+                    android:layout_height="@dimen/EditTextTipsSize"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/sendCAPBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@color/head"
+                android:text="@string/sendCAP"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sendCAPSize" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/msgCAPFrame"
+            android:layout_width="@dimen/editTextWeight"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_below="@id/userIDEdit">
+
+            <EditText
+                android:id="@+id/msgCAP"
+                android:layout_width="@dimen/editTextWeight"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_gravity="center"
+                android:background="@mipmap/register_edit_bg"
+                android:drawableLeft="@mipmap/cap"
+                android:drawablePadding="@dimen/editPadding"
+                android:hint="@string/CAPTip"
+                android:inputType="text"
+                android:textSize="@dimen/editText" />
+
+            <ImageView
+                android:id="@+id/msgCAPEditTip"
+                android:layout_width="@dimen/EditTextTipsSize"
+                android:layout_height="@dimen/EditTextTipsSize"
+                android:layout_gravity="right|center_vertical" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/PswFrame"
+            android:layout_width="@dimen/editTextWeight"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_below="@id/msgCAPFrame">
+
+            <EditText
+                android:id="@+id/passwordEdit"
+                android:layout_width="@dimen/editTextWeight"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_gravity="center"
+                android:background="@mipmap/register_edit_bg"
+                android:drawableLeft="@mipmap/password"
+                android:drawablePadding="@dimen/editPadding"
+                android:drawableStart="@mipmap/password"
+                android:hint="@string/passTip"
+                android:inputType="textPassword"
+                android:textSize="@dimen/editText" />
+
+            <ImageView
+                android:id="@+id/PswEditTip"
+                android:layout_width="@dimen/EditTextTipsSize"
+                android:layout_height="@dimen/EditTextTipsSize"
+                android:layout_gravity="right|center_vertical" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/RepeatPswFrame"
+            android:layout_width="@dimen/editTextWeight"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_below="@id/PswFrame">
+
+            <EditText
+                android:id="@+id/RepeatPswEdit"
+                android:layout_width="@dimen/editTextWeight"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_gravity="center"
+                android:background="@mipmap/register_edit_bg"
+                android:drawableLeft="@mipmap/password"
+                android:drawablePadding="@dimen/editPadding"
+                android:hint="@string/repeatPass"
+                android:inputType="textPassword"
+                android:textSize="@dimen/editText" />
+
+            <ImageView
+                android:id="@+id/RepeatPswEditTip"
+                android:layout_width="@dimen/EditTextTipsSize"
+                android:layout_height="@dimen/EditTextTipsSize"
+                android:layout_gravity="right|center_vertical" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/textCAP"
+            android:layout_width="@dimen/editTextWeight"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_below="@+id/RepeatPswFrame">
+
+            <FrameLayout
+                android:id="@+id/CAPFrame"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8">
+
+                <EditText
+                    android:id="@+id/CAPEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/register_edit_bg"
+                    android:drawableLeft="@mipmap/cap"
+                    android:drawablePadding="@dimen/editPadding"
+                    android:drawableStart="@mipmap/cap"
+                    android:hint="@string/CAPTip"
+                    android:inputType="text"
+                    android:textSize="@dimen/editText" />
+
+                <ImageView
+                    android:id="@+id/CAPEditTip"
+                    android:layout_width="@dimen/EditTextTipsSize"
+                    android:layout_height="@dimen/EditTextTipsSize"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+
+            <com.example.DefinedComponents.AuthCodeView
+                android:id="@+id/AuthCodeView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center_horizontal|center_vertical"
+                android:textSize="@dimen/editText"
+                app:titleText="3712"
+                app:titleTextColor="#00ffff"
+                app:titleTextSize="25sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitBTN"
+            android:layout_width="@dimen/registerBtnWeight"
+            android:layout_height="@dimen/registerBtnHeight"
+            android:layout_alignLeft="@+id/textCAP"
+            android:layout_alignStart="@+id/textCAP"
+            android:layout_below="@+id/textCAP"
+            android:background="@color/head"
+            android:text="提 交"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</LinearLayout>
+

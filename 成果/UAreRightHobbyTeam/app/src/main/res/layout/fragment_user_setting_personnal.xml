@@ -1,0 +1,145 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Fragment.User.UserSettingPersonnalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarSize"
+            android:background="@color/head"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="《返回"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:text="隐私"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="验证加好友"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="通讯录黑名单"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="允许别人查看我标签"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

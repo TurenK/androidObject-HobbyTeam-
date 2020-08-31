@@ -1,0 +1,50 @@
+<resources>
+    <!--wzm-->
+    <string name="app_name">HobbyTeam</string>
+    <string name="register">注 册</string>
+    <string name="userIDTip">请输入手机号注册</string>
+    <string name="passTip">请输入密码</string>
+    <string name="imgDescirption">这是一个图片</string>
+    <string name="repeatPass">请重复密码</string>
+    <string name="cancel">取消</string>
+    <string name="back">《 返回</string>
+    <string name="login">登 录</string>
+    <string name="sendCAP">发送验证码</string>
+    <string name="CAPTip">请输入验证码</string>
+    <string name="Contract1">点击注册按钮则表示您同意</string>
+    <string name="Contract">服务条款</string>
+    <string name="URL_SERVER">http://172.31.34.141:8080/hobby</string>
+    <string name="URL_REG">/user/reg</string>
+    <string name="URL_LOGIN">/user/login</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="keepPwd">保存密码</string>
+    <string name="forgotPwd">忘记密码</string>
+    <string name="localURLREG">localhost/hobbyteam/register</string>
+    <string name="localURLLOGIN">localhost/hobbyteam/login</string>
+    <string name="AfterCloudID">898fbfd17c0c614012b2a5549c98ce90</string>
+    <string name="registerModelName">确定用户手机</string>
+    <string name="qqLogin">QQ登录</string>
+    <string name="推荐">推荐</string>
+    <string name="附近">附近</string>
+    <string name="兴趣">兴趣</string>
+    <string name="全部">全部</string>
+    <string name="修改密码">修改密码</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- zyn-->
+
+
+    <!-- zy-->
+
+
+    <!-- wd-->
+
+
+    <!-- szl-->
+
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/item_comment_mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/item_comment_headimg"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:id="@+id/item_comment_infomainlayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/item_comment_namelayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/item_comment_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/empty33"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/item_comment_taglayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingEnd="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:id="@+id/item_comment_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/empty111"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/item_comment_likelayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/empty36"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/like_before" />
+
+                <TextView
+                    android:id="@+id/item_comment_liketext"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_comment_sendingTime"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

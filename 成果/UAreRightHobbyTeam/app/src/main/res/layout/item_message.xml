@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/item_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/item_message_list_frame"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_message_list_pic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@mipmap/pic_activity"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp" />
+
+            <LinearLayout
+                android:id="@+id/item_message_list_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_message_list_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical|start"
+                    android:text="gay典"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/item_message_list_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical|start"
+                    android:text="来约啊~~~"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_message_list_time_frame"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_message_list_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="20:08" />
+
+                <LinearLayout
+                    android:id="@+id/item_message_list_ignore_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/item_message_list_ignore"
+                        android:layout_width="15dp"
+                        android:layout_height="18dp"
+                        android:background="@mipmap/team_list_ignore" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

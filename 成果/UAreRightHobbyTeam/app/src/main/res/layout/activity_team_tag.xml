@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarSize"
+            android:background="@color/head"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/user_detail_fragment_tag_backbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@color/head"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/back"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="标 签"
+                android:textColor="@color/colorWhite"
+                android:textSize="23sp" />
+
+            <Button
+                android:id="@+id/user_detail_tag_submitBTN"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@color/head"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="提交》"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/tag1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="旅游"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="美食"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag3"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="篮球"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag4"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="羽毛球"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag5"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="足球"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag6"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="游泳"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag7"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="乒乓球"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag8"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="蹦极"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag9"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="跳水"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag10"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="划船"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag11"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="漂流"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag12"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="爬山"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/tag13"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="书法"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag14"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="户外"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag15"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="攀岩"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag16"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="打代码"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag17"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="采摘"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag18"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="种地"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag19"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="动漫"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag20"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="追星"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag21"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="演唱会"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag22"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="音乐剧"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag23"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="乐器"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag24"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="绘画"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/tag25"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="K歌"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag26"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="溜冰"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag27"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="打游戏"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag28"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="广场舞"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag29"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="赛马"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag30"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="撸串"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag31"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="喝酒"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag32"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="约饭"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag33"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="电影"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag34"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="摄影"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag35"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="自行车"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag36"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="健身"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/tag37"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="八卦"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag38"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="保龄球"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag39"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="逛街"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag40"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="跳绳"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag41"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="打水仗"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag42"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="尬聊"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag43"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="相亲"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag44"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="数码"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag45"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="游乐场"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag46"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="拳击"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag47"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="闷骚"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/tag48"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/colorLightGray"
+                            android:text="开朗"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

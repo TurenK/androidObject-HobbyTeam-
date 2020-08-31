@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Fragment.User.UserRecordFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarSize"
+            android:background="@color/head"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="《返回"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:text="活动记录"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="参加小队数量"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/teamnum"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="10"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="历史活动次数"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/acnum"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="15"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="历史活动记录"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=">"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="好友数量"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="130"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
